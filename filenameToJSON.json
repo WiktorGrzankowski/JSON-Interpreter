@@ -1,0 +1,116 @@
+{
+  "instrukcje": [
+    {
+      "nazwa": "A",
+      "wartosc": {
+        "wartosc": 56.0,
+        "typ": "Liczba"
+      },
+      "typ": "Przypisanie"
+    },
+    {
+      "nazwa": "B",
+      "wartosc": {
+        "wartosc": 4.0,
+        "typ": "Liczba"
+      },
+      "typ": "Przypisanie"
+    },
+    {
+      "nazwa": "k",
+      "wartosc": {
+        "wartosc": 0.0,
+        "typ": "Liczba"
+      },
+      "typ": "Przypisanie"
+    },
+    {
+      "nazwa": "BdzieliA",
+      "wartosc": {
+        "wartosc": 0.0,
+        "typ": "Liczba"
+      },
+      "typ": "Przypisanie"
+    },
+    {
+      "warunek": {
+        "argument1": {
+          "argument1": {
+            "nazwa": "B",
+            "typ": "Zmienna"
+          },
+          "argument2": {
+            "nazwa": "k",
+            "typ": "Zmienna"
+          },
+          "typ": "Razy"
+        },
+        "argument2": {
+          "nazwa": "A",
+          "typ": "Zmienna"
+        },
+        "typ": "<="
+      },
+      "blok": {
+        "instrukcje": [
+          {
+            "warunek": {
+              "argument1": {
+                "argument1": {
+                  "nazwa": "B",
+                  "typ": "Zmienna"
+                },
+                "argument2": {
+                  "nazwa": "k",
+                  "typ": "Zmienna"
+                },
+                "typ": "Razy"
+              },
+              "argument2": {
+                "nazwa": "A",
+                "typ": "Zmienna"
+              },
+              "typ": "=="
+            },
+            "blok_prawda": {
+              "instrukcje": [
+                {
+                  "nazwa": "BdzieliA",
+                  "wartosc": {
+                    "wartosc": 1.0,
+                    "typ": "Liczba"
+                  },
+                  "typ": "Przypisanie"
+                }
+              ],
+              "typ": "Blok"
+            },
+            "typ": "If"
+          },
+          {
+            "nazwa": "k",
+            "wartosc": {
+              "argument1": {
+                "nazwa": "k",
+                "typ": "Zmienna"
+              },
+              "argument2": {
+                "wartosc": 1.0,
+                "typ": "Liczba"
+              },
+              "typ": "Plus"
+            },
+            "typ": "Przypisanie"
+          }
+        ],
+        "typ": "Blok"
+      },
+      "typ": "While"
+    },
+    {
+      "nazwa": "BdzieliA",
+      "typ": "Zmienna"
+    }
+  ],
+  "typ": "Blok"
+}

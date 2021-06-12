@@ -1,0 +1,119 @@
+{
+  "typ": "Blok",
+  "instrukcje": [
+    {
+      "typ": "Przypisanie",
+      "nazwa": "A",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 56
+      }
+    },
+    {
+      "typ": "Przypisanie",
+      "nazwa": "B",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 4
+      }
+    },
+    {
+      "typ": "Przypisanie",
+      "nazwa": "k",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 0
+      }
+    },
+    {
+      "typ": "Przypisanie",
+      "nazwa": "BdzieliA",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 0
+      }
+    },
+    {
+      "typ":"While",
+      "warunek":{
+        "typ":"<=",
+        "argument1":{
+          "typ": "Razy",
+          "argument1": {
+            "typ":"Zmienna",
+            "nazwa":"B"
+          },
+          "argument2": {
+            "typ":"Zmienna",
+            "nazwa":"k"
+          }
+        },
+        "argument2":{
+          "typ":"Zmienna",
+          "nazwa":"A"
+        }
+      },
+      "blok":{
+        "typ":"Blok",
+        "instrukcje":[
+          {
+            "typ":"If",
+            "warunek":{
+              "typ":"==",
+              "argument1":{
+                "typ": "Razy",
+                "argument1": {
+                  "typ":"Zmienna",
+                  "nazwa":"B"
+                },
+                "argument2": {
+                  "typ":"Zmienna",
+                  "nazwa":"k"
+                }
+              },
+              "argument2":{
+                "typ":"Zmienna",
+                "nazwa":"A"
+              }
+            },
+            "blok_prawda":{
+              "typ":"Blok",
+              "instrukcje":[
+                {
+                  "typ": "Przypisanie",
+                  "nazwa": "BdzieliA",
+                  "wartosc": {
+                    "typ": "Liczba",
+                    "wartosc": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "typ":"Przypisanie",
+            "nazwa":"k",
+            "wartosc":{
+              "typ":"Plus",
+              "argument1":{
+                "typ":"Zmienna",
+                "nazwa":"k"
+              },
+              "argument2":{
+                "typ":"Liczba",
+                "wartosc":1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "typ":"Zmienna",
+      "nazwa":"BdzieliA"
+    }
+  ]
+}
+
+
+
